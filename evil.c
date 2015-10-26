@@ -8,7 +8,7 @@ void evil(int **grid, int holes){
 	srand(time(&tt));
 	printf("holes-> %d\n", holes);
 	i = rand() % 9;
-	iorig = i + 1;
+	int iorig = i + 1;
 	for (k = 0; k < holes; k++)
 	{
 		j = j + 1;
@@ -25,32 +25,7 @@ void evil(int **grid, int holes){
 		int temp = grid[i][j];
 		grid[i][j] = 0;
 		int num, count = 0;
-		for( num = 1; num < 10; num++ )
-		{
-			if(check(grid, i, j, num))
-				count++;
-		}
-				
-		if(count > 4){
-			grid[i][j] = temp;
-			k--;
-		}
-		else{
-			int x, cnt = 0, cnt1 = 0;
-			for(x = 0; x < 9; x++)
-			{
-				if(grid[i][x])
-					cnt++;
-				if(grid[x][j])
-					cnt1++;		
-			}
-			if(cnt < 1 || cnt1 < 1){
-				grid[i][j] = temp;
-				k--;
-			}
-			else
-				grid[i][j] = 0;
-		}
+			
 	}
 	return;
 }
