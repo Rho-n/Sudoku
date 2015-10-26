@@ -1,7 +1,7 @@
-all: sudoku
+all: project
 
-sudoku: sudokuz.o exteasy.o easy.o medium.o diffi.o evil.o
-	gcc sudokuz.o exteasy.o easy.o medium.o diffi.o evil.o -o sudoku
+sudoku: sudokuz.o exteasy.o easy.o medium.o diffi.o evil.o play.o
+	gcc sudokuz.o exteasy.o easy.o medium.o diffi.o evil.o play.o -o project
 
 sudokuz.o: sudokuz.c
 	gcc -c sudokuz.c
@@ -20,6 +20,10 @@ diffi.o: diffi.c
 
 evil.o: evil.c
 	gcc -c evil.c
+
+play.o: play.c
+	gcc -c play.c
+
 clean:
 	rm *o hello
 

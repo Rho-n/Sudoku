@@ -92,7 +92,6 @@ int fillit(int **grid, int row, int col)
 	else return 1;
 }
 
-void makezero(int **);
 void display(int **grid)
 {
 	int i, j;
@@ -107,7 +106,7 @@ void display(int **grid)
 		}
 		printf("\n");
 	}
-	printf("-----------------");
+	printf("-----------------\n");
 	return;
 }
 
@@ -180,6 +179,14 @@ void makezero(int **grid){  /* Makes all the elements of the grid to zero*/
 	}
 }
 
+void copy(int **grid, int **solutiongrid){
+	int i, j;
+	for( i = 0; i < ROWS; i++ ){
+		for( j = 0; j < COLS; j++ )
+			solutiongrid[i][j] = grid[i][j];
+	}
+
+}
 int main(){
 	int i, j;
   /*  allocate array of pointers  */
@@ -197,10 +204,24 @@ int main(){
 		printf("\nError allocating memory\n");
 		exit(1);
 	}	
+	
+	int **solutiongrid =(int **)malloc( ROWS * sizeof(int *) );
+      	if( solutiongrid == NULL ){
+		printf("\nError allocating memory\n");
+		exit(1);
+	}
+    	for( i = 0 ; i < ROWS ; i++ ) {
+    		solutiongrid[i] =(int *) malloc ( COLS * sizeof(int) );
+  	}
+  	
+  	if(solutiongrid[i-1]==NULL) {
+		printf("\nError allocating memory\n");
+		exit(1);
+	}	
 
   /* Makes all the elements of the grid to zero*/
 	makezero(grid);
-	
+	makezero(solutiongrid);
 	fillinrandom(grid);
 	
 	int level;
@@ -216,52 +237,66 @@ int main(){
 	{
 	case 1:
 		if(fillit(grid, 0 , 0))
-		{	
+		{
+			copy(grid, solutiongrid);	
 			exteasy(grid);
 			int zeros = checkzeros(grid);
 			display(grid);
+			play(grid, solutiongrid);
 		}
 		break;
 	case 2:
 		if(fillit(grid, 0 , 0))
 		{	
+			
+			copy(grid, solutiongrid);	
 			easy(grid);
 			int zeros = checkzeros(grid);
 			display(grid);
+			play(grid, solutiongrid);
 		}
 		break;
 	case 3:
 		if(fillit(grid, 0 , 0))
 		{	
 			int holes = 49 - rand() % 4;
+			copy(grid, solutiongrid);	
 			medium(grid, holes);
 			int zeros = checkzeros(grid);
 			int remain = holes - zeros;
 			final(grid, remain, 3);
 			display(grid);
+			play(grid, solutiongrid);
+//			display(grid, solutiongrid);
 		}
 		break;
 	case 4:
 		if(fillit(grid, 0 , 0))
 		{
+			copy(grid, solutiongrid);	
 			int holes = 53 - rand() % 4;
 			diffi(grid, holes);
 			int zeros = checkzeros(grid);
 			int remain = holes - zeros;
 			final(grid, remain, 3);
 			display(grid);
+			play(grid, solutiongrid);
+//			display(grid, solutiongrid);
 			
 		}
 		break;	
 	case 5:
 		if(fillit(grid, 0 , 0))
 		{	
+			copy(grid, solutiongrid);	
 			int holes = 57 - rand() % 4;
 			evil(grid, holes);
 			int zeros = checkzeros(grid);
 			int remain = holes - zeros;
 			final(grid, remain, 3);
 			display(grid);
+			play(grid, solutiongrid);
+//			display(grid, solutiongrid);
 		}
 		break;
 	default:
