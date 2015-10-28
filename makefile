@@ -1,10 +1,10 @@
 all: project
 
-sudoku: sudokuz.o exteasy.o easy.o medium.o diffi.o evil.o play.o
-	gcc sudokuz.o exteasy.o easy.o medium.o diffi.o evil.o play.o -o project
+project: main.o exteasy.o easy.o medium.o diffi.o evil.o play.o
+	gcc main.o exteasy.o easy.o medium.o diffi.o evil.o play.o -o project
 
-sudokuz.o: sudokuz.c
-	gcc -c sudokuz.c
+main.o: main.c
+	gcc -c main.c
 
 easy.o: easy.c
 	gcc -c easy.c
