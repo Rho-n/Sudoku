@@ -6,7 +6,6 @@ void medium(int **grid, int holes){
 	int i = 0, j = 0, iterctr = 0, k;
 	time_t tt;
 	srand(time(&tt));
-	printf("holes-> %d\n", holes);
 	for (k = 0; k < holes; k++)
 	{
 		if(i % 2 == 0)

@@ -6,7 +6,6 @@ void evil(int **grid, int holes){
 	int i, j = 0, iterctr = 0, k;
 	time_t tt;
 	srand(time(&tt));
-	printf("holes-> %d\n", holes);
 	i = rand() % 9;
 	int iorig = i + 1;
 	for (k = 0; k < holes; k++)

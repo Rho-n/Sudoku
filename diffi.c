@@ -7,7 +7,6 @@ void diffi(int **grid, int holes){
 	int i, j = 0, iterctr = 0, k;
 	time_t tt;
 	srand(time(&tt));
-	printf("holes-> %d\n", holes);
 	i = rand() % 9;
 	int iorig = i + 1;
 	int forward = i % 2;
