@@ -20,16 +20,17 @@
 /*-------------------Draws the borders of the sudoku board to the screen-------------*/
 void draw_board(void) {
 
+	int h,v;
 	glBegin(GL_LINES);
 
 	/*---- Individual square borders -----*/
 	glColor3i(0, 0, 0);
-	for(int h  = 0; h < 9; ++h) {
+	for( h  = 0; h < 9; ++h) {
 		glVertex2f(1,  (.222222222 * h) - 1);
 		glVertex2f(-1, (.222222222 * h) - 1);
 	}
 
-	for(int v  = 0; v < 9; ++v) {
+	for( v  = 0; v < 9; ++v) {
 		glVertex2f(-1 + (.222222222 * v),  1);
 		glVertex2f(-1 + (.222222222 * v), -1);
 	}
@@ -77,11 +78,11 @@ void draw_board(void) {
 /*------------------------------------------------------------------------------*/
 /*---------------Draws the values in the board onto the screen-----------------------*/
 void draw_numbers(void) {
-
+	int x,y;
 	glColor3f(.1f, .2f, .3f);
 
-	for(int x  = 0; x < 9; ++x) {
-		for(int y  = 0; y < 9; ++y) {
+	for(x  = 0; x < 9; ++x) {
+		for( y  = 0; y < 9; ++y) {
 			if(board[x][y]) {
 				draw_digit((y * .222222222) - .94, -(x * .222222222) + .81, board[x][y], 5);
 			}
