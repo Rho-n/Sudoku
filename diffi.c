@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-
+#include "sudoku.h"
 void diffi(int **grid, int holes){
 	//printf("yet to do");
 	int i, j = 0, iterctr = 0, k;

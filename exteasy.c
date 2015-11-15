@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include "sudoku.h"
 void exteasy(int **grid){
 	int i, j, max = 9, k;
 	time_t tt;

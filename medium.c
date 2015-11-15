@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-
+#include "sudoku.h"
 void medium(int **grid, int holes){
 	int i = 0, j = 0, iterctr = 0, k;
 	time_t tt;

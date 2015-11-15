@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-
+#include "sudoku.h"
 void easy(int **grid){
 	
 	int i, j, max = 14, k;
