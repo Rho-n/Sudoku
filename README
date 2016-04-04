@@ -3,11 +3,11 @@
 *111403023
 
 The code generate sudoku from extremely easy level to evil level.
-You can play it in UBUNTU.
-Install the Graphics library using the command
+You can play it in ubuntu systems.
+Install the Graphics library OPENGL using the command
 1.sudo apt-get install freeglut3 freeglut3-dev
 2.sudo apt-get install binutils-gold
-User Interface Ready.
+
 Graphical Interface using OpenGL library.
 Select level from the Listed levels.
 A window with puzzle pops up.
@@ -18,7 +18,8 @@ Press 'S/S' for solution.
 Press 'c/C' to check whether you have solved it or not.
 The difficulty of levels depend upon number of void spaces or holes and also on the no. of possible of numbers in a hole.
 Enjoy PLaying. 
-   
+
+References : http://zhangroup.aporc.org/images/files/Paper_3485.pdf  
 
 
 
