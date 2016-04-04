@@ -2,7 +2,7 @@
 *Aditya Malu
 *111403023
 
-The code generate sudoku from extremely easy level to evil level.
+The code generates sudoku from extremely easy level to evil level.
 You can play it in ubuntu systems.
 Install the Graphics library OPENGL using the command
 1.sudo apt-get install freeglut3 freeglut3-dev
