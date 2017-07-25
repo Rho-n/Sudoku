@@ -4,10 +4,21 @@
 
 The code generates sudoku from extremely easy level to evil level.
 You can play it in ubuntu systems.
-Install the Graphics library OPENGL using the command
-1.sudo apt-get install freeglut3 freeglut3-dev
-2.sudo apt-get install binutils-gold
+_________________________________________________________________________
 
+Instructions to run the program in linux 
+
+  Install the Graphics library OPENGL using the command
+    sudo apt-get install freeglut3 freeglut3-dev
+    sudo apt-get install binutils-gold
+  
+  Migrate to the project directory and type in this command
+    make project
+    
+  An executable 'project' file be generated. Just type
+    ./project
+  Read the instructions, choose your level and start playing.
+_________________________________________________________________________
 Graphical Interface using OpenGL library.
 Select level from the Listed levels.
 A window with puzzle pops up.
