@@ -1,10 +1,11 @@
-*SUDOKU
-*Aditya Malu
-*111403023
+* SUDOKU
+* Aditya Malu
+* 111403023
 
 The code generates sudoku from extremely easy level to evil level.
 You can play it in ubuntu systems.
-_________________________________________________________________________
+
+---
 
 Instructions to run the program in linux 
 
@@ -18,8 +19,11 @@ Instructions to run the program in linux
   An executable 'project' file be generated. Just type
     ./project
   Read the instructions, choose your level and start playing.
-_________________________________________________________________________
-Graphical Interface using OpenGL library.
+
+---
+
+* Graphical Interface using OpenGL library.
+
 Select level from the Listed levels.
 A window with puzzle pops up.
 Navigate using mouse.
