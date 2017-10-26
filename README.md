@@ -25,7 +25,7 @@ Instructions to run the program in linux
 
 * Graphical Interface using OpenGL library.
 
-
+`
 	Select level from the Listed levels.
 	A window with puzzle pops up.
 	Navigate using mouse.
@@ -33,6 +33,7 @@ Instructions to run the program in linux
 	Press 'q/Q' to quit.
 	Press 'S/S' for solution.
 	Press 'c/C' to check whether you have solved it or not.
+`
 **The difficulty of levels depend upon number of void spaces or holes and also on the no. of possible of numbers in a hole.
 Enjoy PLaying.**
 
